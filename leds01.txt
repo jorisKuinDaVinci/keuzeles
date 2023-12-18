@@ -1,0 +1,7 @@
+leds=[]
+index = 7
+leds[index].on
+leds[index].off
+index+=1
+index-=1
+
