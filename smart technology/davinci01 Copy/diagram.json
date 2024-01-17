@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 304.2, "left": -717.2, "attrs": {} },
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 275.25,
+      "left": -342,
+      "attrs": { "env": "micropython-20231227-v1.22.0" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 383.4,
+      "left": -525,
+      "rotate": 90,
+      "attrs": { "color": "black" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 313.2,
+      "left": -447.4,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 445.55,
+      "left": -480,
+      "attrs": { "value": "10000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 398.4,
+      "left": -461.35,
+      "rotate": 90,
+      "attrs": { "value": "100" }
+    }
+  ],
+  "connections": [
+    [ "pico:GND.4", "bb1:28b.j", "black", [ "h0" ] ],
+    [ "bb1:29t.b", "pico:GP6", "green", [ "v0" ] ],
+    [ "pico:3V3", "bb1:21t.a", "red", [ "h30", "v-67.2", "h-240" ] ],
+    [ "bb1:23b.j", "pico:GP15", "green", [ "v9.6" ] ],
+    [ "led1:A", "bb1:29t.a", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:28t.a", "", [ "$bb" ] ],
+    [ "r2:1", "bb1:28t.c", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:28b.g", "", [ "$bb" ] ],
+    [ "btn1:1.l", "bb1:23t.c", "", [ "$bb" ] ],
+    [ "btn1:2.l", "bb1:21t.c", "", [ "$bb" ] ],
+    [ "btn1:1.r", "bb1:23b.h", "", [ "$bb" ] ],
+    [ "btn1:2.r", "bb1:21b.h", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:23b.i", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:29b.i", "", [ "$bb" ] ],
+    [ "bb1:28b.j", "bb1:29b.j", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
